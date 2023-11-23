@@ -1,0 +1,433 @@
+/* Navbar */
+nav {
+    font-family: 'Century Gothic', sans-serif;
+    background-color: rgb(37, 36, 36);
+}
+
+.navbar-brand {
+    color: white;
+}
+
+.navbar-nav .nav-link {
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.navbar-nav .nav-link:hover {
+    cursor: pointer;
+    position: relative;
+}
+.navbar-nav .nav-link::before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #fff;
+    visibility: hidden;
+    transition: all 0.3s ease;
+}
+.navbar-nav .nav-link:hover::before {
+    width: 100%;
+    visibility: visible;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.fade-in {
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Index */
+body {
+    background-color: rgb(36, 37, 44);
+    
+}
+
+.box {
+    background: rgba(0, 0, 0, 0.4);
+    padding: 40px;
+    text-align: center;
+    margin: auto;
+    color: white;
+    font-family: 'Century Gothic', sans-serif;
+    
+}
+.img-box {
+    border-radius: 50%;
+    width: 210px;
+    height: 200px;
+    margin-top: 0%;
+}
+h1 {
+    color: white;
+    font-size: 40px;
+    letter-spacing: 4px;
+    font-weight: 100;
+}
+.box h5 {
+    font-size: 20px;
+    letter-spacing: 3px;
+    font-weight: 100;
+}
+ul {
+    font-family: 'Century Gothic', sans-serif;
+    color: white;
+    font-size: 20px;
+    letter-spacing: 3px;
+    font-weight: 100;
+}
+h5 {
+    font-family: 'Century Gothic', sans-serif;
+    color: white;
+    font-size: 10px;
+    letter-spacing: 3px;
+    
+}
+h3 {
+    font-family: 'Century Gothic', sans-serif;
+    color: white;
+    letter-spacing: 3px;
+    
+}
+
+.toast {
+    visibility: hidden;
+    position: fixed;
+    bottom: 16px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 16px;
+    border-radius: 8px;
+    z-index: 1;
+}
+.show {
+    visibility: visible;
+}
+/* About */
+.about {
+    margin-top: 5%;
+}
+#about_h1 {
+    text-align: center;
+    margin-bottom: 3%;
+}
+.about-box {
+    background: rgba(0, 0, 0, 0.4);
+    padding: 40px;
+}
+.about-container {
+    width: 400px;
+}
+
+.ul_about {
+    list-style: none;
+}
+/* Contact */
+#social {
+    font-family: 'Century Gothic', sans-serif;
+    color: white;
+    font-size: 100px;
+    letter-spacing: 3px;
+    font-weight: 100;
+    margin-top: 10%;
+}
+.icons {
+    scale: 70%;
+}
+a {
+    color: rgb(255, 255, 255);
+  }
+#social li {
+    display: inline-block;
+    margin: 12px;
+}
+
+.form-contact {
+    margin-top: 2%;
+}
+
+.form-inline {
+    border: 1px solid #ccc;
+    padding: 5px;
+    margin-right: 83%;
+    margin-top: 1%;
+}
+.contact-box {
+    background: rgba(0, 0, 0, 0.4);
+    padding: 40px;
+}
+/* Survey */
+.box-survey {
+    margin-top: 5%;
+}
+
+.to-do{
+width: min(80%, 1024px);
+padding: 20px 10px;
+background-color: rgba(0, 0, 0, 0.4);
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: space-around;
+border-radius: 20px;
+margin-top: 60px;
+margin-left: 250px;
+}
+
+.h1_to-do {
+font-family: 'Century Gothic', sans-serif;
+color: white;
+letter-spacing: 3px;
+padding-bottom: 20px;
+}
+
+.input-form{
+width: 80%;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+gap: 10px;
+}
+
+input{
+width: 100%;
+padding: 10px 20px;
+border: 2px solid #3b82f6;
+border-radius: 10px;
+outline: none;
+font-size: 1.25rem;
+}
+
+.list{
+width: 80%;
+margin-top: 10px;
+list-style: none;
+}
+
+.task{
+height: 2rem;
+width: 100%;
+display: flex;
+align-items: center;
+justify-content: space-between;
+color: #fff;
+cursor: pointer;
+}
+
+
+.container_to-do{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    & .circle{
+        height: 80%;
+        aspect-ratio: 1;
+        border: none;
+        border-radius: 50%;
+        background-color: #4a7e9c;
+    }
+}
+
+.completed{
+    & .container{
+        & .circle{
+            background-color: #3b82f6;
+        }
+    }
+    & .close-icon{
+        text-decoration: line-through;
+        pointer-events: none;
+    }
+}
+.completed .task-name {
+    text-decoration: line-through;
+}
+
+/* Timer */
+.timer-container {
+margin-top: 2%;
+margin-left: 650px;
+width: 200px;
+height: 200px;
+border: 10px solid #4a7e9c;
+border-radius: 50%;
+display: flex;
+align-items: center;
+justify-content: center;
+font-size: 36px;
+color: #4a7e9c;
+text-align: center;
+}
+  
+.input-container {
+margin-left: 650px;
+margin-top: 20px;
+display: flex;
+align-items: center;
+}
+
+.label_timer {
+color: white;
+}
+  
+input[type="number"] {
+width: 80px;
+font-size: 18px;
+padding: 5px;
+margin-right: 10px;
+}
+  
+button {
+font-size: 18px;
+padding: 5px 10px;
+}
+
+.timer {
+font-size: 36px;
+margin-top: 5px;
+}
+
+.timer.running {
+animation: countdown-animation linear infinite;
+}
+
+.h1_timer {
+    margin-top: 5%;
+    font-family: 'Century Gothic', sans-serif;
+    color: white;
+    letter-spacing: 3px;
+    text-align: center;
+}
+
+/* Login */
+
+.container-login {
+    margin-top: 100px;
+    margin-left: 600px;
+    max-width: 400px;
+    padding: 20px;
+    border: 1px solid rgba(0, 0, 0, 0.4);;
+    border-radius: 5px;
+}
+
+.label-login{
+    color: white;
+}
+
+.h2-login{
+    color: white;
+}
+
+.btn-login {
+    height: 45px;
+    width: 100%;
+    margin: 15px 0;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.error {
+    color: red;
+    font-size: 14px;
+}
+
+#successMessage {
+    color: green;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.container-game {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.flag {
+    width: 100px;
+    height: auto;
+    margin: 10px;
+    cursor: pointer;
+}
+
+.target {
+    width: 150px;
+    height: 150px;
+    border: 2px dashed black;
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.p_game {
+    color: white;
+    text-align: center;
+}
+
+.target_boxes {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.h1_game {
+    margin-top: 5%;
+    font-family: 'Century Gothic', sans-serif;
+    color: white;
+    letter-spacing: 3px;
+    text-align: center;
+}
+
+/* Quiz */
+
+.quiz-container {
+    background: rgba(0, 0, 0, 0.4);
+    border-radius: 10px;
+    box-shadow: 0 0 10px 2px rgba(100, 100, 100, 0.1);
+    width: 100%;
+    overflow: hidden;
+    text-align: center;
+    margin-top: 10%;
+    
+}
+.quiz-header {
+    padding: 4rem;
+}
+
+#resultMessage {
+    color: white;
+    text-align: center;
+}
+
+#question {
+    color: white;
+}
+
+#quiz-ul {
+    color: white;
+}
+
+#submit {
+    margin-bottom: 5%;
+}
