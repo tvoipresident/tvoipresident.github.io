@@ -49,7 +49,7 @@ $(document).ready(function () {
         {
             question: "Where am I from?",
             options: ["Italy", "USA", "Kazahstan", "China"],
-            answer: "AITU",
+            answer: "Kazakhstan",
         },
       ],
       n = 0,
