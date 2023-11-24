@@ -85,7 +85,7 @@
 
             <div class="form-contact text-center mt-4">
                 <h3>Also, you can leave your email so I can contact you:</h3>
-                <form onsubmit="return validateForm()">
+                <form id="contactForm" onsubmit="return validateForm();">
                     <div class="form-group mx-sm-3 mb-2">
                         <input type="text" class="form-control" id="name" placeholder="Enter your name" required>
                         <div class="error-message" id="name-error"></div>
@@ -97,6 +97,22 @@
                     <button type="submit" class="btn btn-secondary">Submit</button>
                 </form>
             </div>
+            <div class="modal" tabindex="-1" role="dialog" id="myModal">
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title">Submission Status</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                      <p id="modal-message"></p>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
         </div>
         <footer class="footer mt-auto py-3 bg-dark text-white">
             <div class="container text-center">

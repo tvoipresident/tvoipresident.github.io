@@ -4,36 +4,30 @@ document.addEventListener("DOMContentLoaded", function() {
     navItems.forEach(function(item, index) {
         setTimeout(function() {
             item.classList.add("fade-in");
-        }, index * 200); // Delay each item's animation by 200ms
+        }, index * 200);
     });
 });
 
 document.addEventListener("DOMContentLoaded", function() {
-    // Get the elements you want to animate
     var toDoSection = document.querySelector(".to-do");
     var timerSection = document.querySelector(".timer-container");
 
-    // Add a class to trigger the fade-in animation with a delay
     function addFadeInAnimation(element) {
         setTimeout(function() {
             element.classList.add("fade-in");
-        }, 500); // Delay the animation by 500ms (adjust as needed)
+        }, 500);
     }
 
-    // Trigger the fade-in animation for the to-do and timer sections
     addFadeInAnimation(toDoSection);
     addFadeInAnimation(timerSection);
 
 });
 
 
-
-// Wait for the DOM to be fully loaded
 document.addEventListener("DOMContentLoaded", function() {
     const taskInput = document.querySelector(".task-input");
     const taskList = document.querySelector(".list");
 
-    // Function to create a new task item
     function createTask(taskName) {
         const li = document.createElement("li");
         li.className = "task";
@@ -59,7 +53,6 @@ document.addEventListener("DOMContentLoaded", function() {
         taskList.appendChild(li);
     }
 
-    // Function to handle task submission
     function addTask(event) {
         if (event.key === "Enter") {
             const taskName = taskInput.value.trim();
@@ -70,19 +63,16 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     }
 
-    // Function to mark a task as completed
     function toggleCompleted() {
         const task = this.closest(".task");
         task.classList.toggle("completed");
     }
 
-    // Function to remove a task
     function removeTask() {
         const task = this.closest(".task");
         task.remove();
     }
 
-    // Event listeners
     taskInput.addEventListener("keypress", addTask);
     taskList.addEventListener("click", function(event) {
         if (event.target.matches(".circle")) {
@@ -119,3 +109,19 @@ function startTimer() {
         }
     }, 1000);
 }
+
+document.addEventListener("DOMContentLoaded", function () {
+    var scrollToTopBtn = document.getElementById("scrollToTopBtn");
+
+    window.onscroll = function () {
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        scrollToTopBtn.style.display = "block";
+      } else {
+        scrollToTopBtn.style.display = "none";
+      }
+    };
+
+    scrollToTopBtn.addEventListener("click", function () {
+      document.documentElement.scrollTop = 0;
+    });
+});

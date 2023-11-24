@@ -21,32 +21,19 @@ document.addEventListener("DOMContentLoaded", function() {
     
 });
 
-function validateForm() {
-    var name = document.getElementById('name').value;
-    var email = document.getElementById('email').value;
-    var nameError = document.getElementById('name-error');
-    var emailError = document.getElementById('email-error');
+document.addEventListener("DOMContentLoaded", function () {
+    const contactForm = document.getElementById("contactForm");
+    const modal = new bootstrap.Modal(document.getElementById('myModal'));
 
-    nameError.textContent = '';
-    emailError.textContent = '';
+    contactForm.addEventListener("submit", function (event) {
+      event.preventDefault();
+      const name = document.getElementById("name").value;
+      const email = document.getElementById("email").value;
 
-    if (name === '') {
-        nameError.textContent = 'Name is required';
-        return false;
-    }
+      const modalMessage = document.getElementById("modal-message");
+      modalMessage.textContent = `Thank you, ${name}! We will contact you at ${email}.`;
 
-    if (email === '') {
-        emailError.textContent = 'Email is required';
-        return false;
-    } else {
-        var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        if (!emailPattern.test(email)) {
-            emailError.textContent = 'Invalid email format';
-            return false;
-        }
-    }
-
-    alert("I am 100% going to contact you");
-    return true;
-}
+      modal.show();
+    });
+  });
 

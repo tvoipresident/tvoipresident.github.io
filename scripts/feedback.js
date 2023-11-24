@@ -1,14 +1,4 @@
 document.addEventListener("DOMContentLoaded", function() {
-    var navItems = document.querySelectorAll(".navbar-nav .nav-item");
-
-    navItems.forEach(function(item, index) {
-        setTimeout(function() {
-            item.classList.add("fade-in");
-        }, index * 200); // Delay each item's animation by 200ms
-    });
-});
-
-document.addEventListener("DOMContentLoaded", function() {
     const stars = document.querySelectorAll('.star-widget input');
     const formHeader = document.querySelector('form header');
     const formTextarea = document.querySelector('.textarea textarea');
@@ -30,10 +20,9 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 
     submitButton.addEventListener('click', function(event) {
-        event.preventDefault(); // Prevents the form from submitting
+        event.preventDefault();
 
-        // Show alert
-        alert("Thank you for your feedback!");
+        $('#feedbackModal').modal('show');
     });
 
     function getHeaderMessage(rating) {

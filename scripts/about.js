@@ -4,21 +4,33 @@ document.addEventListener("DOMContentLoaded", function() {
     navItems.forEach(function(item, index) {
         setTimeout(function() {
             item.classList.add("fade-in");
-        }, index * 200); // Delay each item's animation by 200ms
+        }, index * 200);
     });
 });
 
 document.addEventListener("DOMContentLoaded", function() {
-    // Get the elements you want to animate
     var aboutBox = document.querySelector(".about-box");
 
-    // Add a class to trigger the fade-in animation with a delay
     function addFadeInAnimation(element) {
         setTimeout(function() {
             element.classList.add("fade-in");
-        }, 500); // Delay the animation by 500ms (adjust as needed)
+        }, 500);
     }
-
-    // Trigger the fade-in animation for the about-box element
     addFadeInAnimation(aboutBox);
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+    var scrollToTopBtn = document.getElementById("scrollToTopBtn");
+
+    window.onscroll = function () {
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        scrollToTopBtn.style.display = "block";
+      } else {
+        scrollToTopBtn.style.display = "none";
+      }
+    };
+
+    scrollToTopBtn.addEventListener("click", function () {
+      document.documentElement.scrollTop = 0;
+    });
 });
